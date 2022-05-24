@@ -1,0 +1,94 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    h1{background-color:#FFD43B;
+      border:6px solid #306998;
+      border-radius: 50px;
+      padding:30px;
+      margin:50px;
+      text-align:center;
+    }
+    h2::before {
+      counter-increment:section;
+      content:counter(section);
+    }
+    h2{
+      background-color:#FFE873;
+        border:2px solid #306998;
+        border-radius: 10px;
+        padding:30px;
+        margin:50px;
+        text-align:center;
+        width:200px;
+    }
+    pre{
+      border:4px solid #306998;
+      margin:50px;
+      paddin-left:80px;
+      text-align:left;
+      font-size:150%;
+      background-color:#FFFFFF;
+      overflow:auto;
+    }
+    html{
+      background-color:#efefefef;
+      counter - reset:section;
+    }
+    ul{
+      padding: 5px;
+      margin: 35px;
+      font-size:150%;
+      background: #4B8BBE;
+      width: 500px;
+      border:4px solid #646464;
+      list-style-type: none;
+      padding: 20px;
+      overflow: auto;
+    }
+    button{
+      float: right;
+      border:4px solid #646464;
+      background-color:#FFE873;
+      font-size:300%;
+      font family:sans-serif;
+      padding : 50px;
+      margin-right:20%;
+
+    }
+  </style>
+
+</head>
+<body>
+
+<h1> Python Quiz for {{user_name}} </h1>
+
+<h2> Question</h2>
+
+<pre>
+  >>> my_string = "Hello"d asdddddddddddddddddddddddd
+
+>>> my_string[-1]
+'o'
+
+>>> my_string[-2]
+'l'
+
+>>> my_string[-3]
+'l'
+
+>>> my_string[-4]
+'e'
+
+>>> my_string[-5]
+'H'
+</pre>
+<form><button>Υποβολή</button>
+  <ul>
+{% for reply in replies %}
+    <li><input type="radio" name="answer" value="1">{{ reply }}</li>
+{% endfor %}
+</ul>
+</form>
+</body>
+</html>
